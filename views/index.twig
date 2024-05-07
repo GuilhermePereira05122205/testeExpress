@@ -1,0 +1,27 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Quantidade</th>
+        <th>Descricao</th>
+        <th>botoes</th>
+      </tr>
+    </thead>
+    <tbody>
+     {% for dado in dados %}
+      <tr>
+        <td>{{dado.nome}}</td>
+        <td>{{dado.quantidade}}</td>
+        <td>{{dado.descricao}}</td>
+        <td>
+          <a href="/atualizar/{{dado.id}}"><button>Atualizar</button></a>
+          <a href="/excluir/{{dado.id}}"><button>Excluir</button></a>
+        </td>
+      </tr>
+     {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <form action="/atualizar/{{dados.id}}" method="post">
+    <label for="">Nome</label><br>
+    <input type="text" name="nome" id="" value="{{dados.nome}}"><br>
+    <label for="">Quantidade</label><br>
+    <input type="text" name="quantidade" value="{{dados.quantidade}}"><br>
+    <label for="">Descricao</label><br>
+    <input type="text" name="descricao" value="{{dados.descricao}}"><br>
+    <input type="submit" value="Enviar">
+  </form>
+{% endblock %}

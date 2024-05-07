@@ -1,0 +1,13 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <form action="/cadastrar" method="post">
+    <label for="">Nome</label><br>
+    <input type="text" name="nome" id=""><br>
+    <label for="">Quantidade</label><br>
+    <input type="text" name="quantidade" id=""><br>
+    <label for="">Descricao</label><br>
+    <input type="text" name="descricao" id=""><br>
+    <input type="submit" value="enviar">
+  </form>
+{% endblock %}
